@@ -24,7 +24,10 @@
      </rect>
     </property>
     <property name="toolTip">
-     <string>Enter the desired name of your new Launcher icon here.</string>
+     <string>Yellow  indicates a Required field</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 0);</string>
     </property>
     <property name="placeholderText">
      <string>Icon Name</string>
@@ -56,7 +59,10 @@
      </rect>
     </property>
     <property name="toolTip">
-     <string>The terminal command used to start this applicatioin or script</string>
+     <string>Yellow  indicates a Required field</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 0);</string>
     </property>
     <property name="placeholderText">
      <string>Command to Start App</string>
@@ -86,6 +92,12 @@
       <width>311</width>
       <height>27</height>
      </rect>
+    </property>
+    <property name="toolTip">
+     <string>Yellow indictes a Required Field</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 0);</string>
     </property>
     <property name="placeholderText">
      <string>Path to Icon Image</string>
@@ -151,6 +163,9 @@
       <height>22</height>
      </rect>
     </property>
+    <property name="accessibleName">
+     <string>Accessories</string>
+    </property>
     <property name="text">
      <string>Accessories</string>
     </property>
@@ -163,6 +178,9 @@
       <width>161</width>
       <height>22</height>
      </rect>
+    </property>
+    <property name="accessibleName">
+     <string>Code</string>
     </property>
     <property name="text">
      <string>Code</string>
@@ -177,6 +195,9 @@
       <height>22</height>
      </rect>
     </property>
+    <property name="accessibleName">
+     <string>Graphics</string>
+    </property>
     <property name="text">
      <string>Graphics</string>
     </property>
@@ -189,6 +210,9 @@
       <width>161</width>
       <height>22</height>
      </rect>
+    </property>
+    <property name="accessibleName">
+     <string>Files / Folders</string>
     </property>
     <property name="text">
      <string>Files / Folders</string>
@@ -203,6 +227,9 @@
       <height>22</height>
      </rect>
     </property>
+    <property name="accessibleName">
+     <string>Info</string>
+    </property>
     <property name="text">
      <string>Info</string>
     </property>
@@ -215,6 +242,9 @@
       <width>161</width>
       <height>22</height>
      </rect>
+    </property>
+    <property name="accessibleName">
+     <string>Music</string>
     </property>
     <property name="text">
      <string>Music</string>
@@ -229,6 +259,9 @@
       <height>22</height>
      </rect>
     </property>
+    <property name="accessibleName">
+     <string>Help</string>
+    </property>
     <property name="text">
      <string>Help</string>
     </property>
@@ -241,6 +274,9 @@
       <width>161</width>
       <height>22</height>
      </rect>
+    </property>
+    <property name="accessibleName">
+     <string>Photos</string>
     </property>
     <property name="text">
      <string>Photos</string>
@@ -255,6 +291,9 @@
       <height>22</height>
      </rect>
     </property>
+    <property name="accessibleName">
+     <string>Videos</string>
+    </property>
     <property name="text">
      <string>Videos</string>
     </property>
@@ -267,6 +306,9 @@
       <width>161</width>
       <height>22</height>
      </rect>
+    </property>
+    <property name="accessibleName">
+     <string>Web</string>
     </property>
     <property name="text">
      <string>Web</string>
@@ -281,6 +323,9 @@
       <height>22</height>
      </rect>
     </property>
+    <property name="accessibleName">
+     <string>Social</string>
+    </property>
     <property name="text">
      <string>Social</string>
     </property>
@@ -293,6 +338,9 @@
       <width>161</width>
       <height>22</height>
      </rect>
+    </property>
+    <property name="accessibleName">
+     <string>Reference</string>
     </property>
     <property name="text">
      <string>Reference</string>
@@ -390,6 +438,9 @@
     </property>
    </widget>
    <widget class="QPushButton" name="btnAddaction">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>470</x>
@@ -403,6 +454,9 @@
     </property>
    </widget>
    <widget class="QPushButton" name="btnRemoveAction">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>730</x>
@@ -416,6 +470,9 @@
     </property>
    </widget>
    <widget class="QPushButton" name="btnCreateLauncher">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>730</x>
@@ -441,7 +498,7 @@
      <string>Cancel</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>20</x>

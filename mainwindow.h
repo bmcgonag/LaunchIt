@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include <QFileDialog>
+#include <QListWidgetItem>
+#include <QFocusEvent>
 
 namespace Ui {
 class MainWindow;
@@ -23,9 +25,25 @@ private slots:
 
     void on_btnFindImage_clicked();
 
-    void on_btnCancel_clicked();
-
     void on_btnCreateLauncher_clicked();
+
+    void on_txtIconName_textChanged(const QString &arg1);
+
+    void on_txtExecCmd_textChanged(const QString &arg1);
+
+    void on_txtImagePath_textChanged(const QString &arg1);
+
+    void on_listActions_itemClicked(QListWidgetItem *item);
+
+    void on_txtActionName_textChanged(const QString &arg1);
+
+    void on_txtActionExec_textChanged(const QString &arg1);
+
+    void EnableDisableCreateLauncher();
+
+    void EnableDisableAddAction();
+
+    void BlankFields();
 
 private:
     Ui::MainWindow *ui;
