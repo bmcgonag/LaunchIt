@@ -346,16 +346,6 @@
      <string>Reference</string>
     </property>
    </widget>
-   <widget class="QGraphicsView" name="grpIcon">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>340</y>
-      <width>121</width>
-      <height>111</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QLabel" name="lblCategories">
     <property name="geometry">
      <rect>
@@ -537,6 +527,22 @@
      </item>
     </layout>
    </widget>
+   <widget class="QLabel" name="IconImage">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>350</y>
+      <width>181</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -587,7 +593,6 @@
   <tabstop>btnRemoveAction</tabstop>
   <tabstop>btnCancel</tabstop>
   <tabstop>btnCreateLauncher</tabstop>
-  <tabstop>grpIcon</tabstop>
  </tabstops>
  <resources/>
  <connections>
