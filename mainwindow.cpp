@@ -79,7 +79,14 @@ void MainWindow::on_btnCreateLauncher_clicked()
             out << "Icon=" + ui->txtImagePath->text() + "\n";
             out << "Terminal=" + terminalValue + "\n";
             out << "Type=" + ui->comboType->currentText() + "\n";
-            out << "Categories=";
+
+            GetCategories();
+
+            out << "Categories=" + categoriesSel;
+
+
+
+
             file.close();
 
             QMessageBox successMsg;
@@ -181,4 +188,72 @@ void MainWindow::BlankFields() {
     ui->listActions->clear();
 
 
+}
+
+
+QStringList MainWindow::GetCategories() {
+
+    QStringList categoriesSel;
+
+    if (ui->cbAccessories->isChecked()){
+        categoriesSel << "Accessories";
+
+    }
+
+    if (ui->cbCode->isChecked()) {
+        categoriesSel << "Code";
+
+    }
+
+    if (ui->cbFiles->isChecked()) {
+        categoriesSel << "Files / Folders";
+
+    }
+
+    if (ui->cbGraphics->isChecked()) {
+        categoriesSel << "Graphics";
+
+    }
+
+    if (ui->cbHelp->isChecked()) {
+        categoriesSel << "Help";
+
+    }
+
+    if (ui->cbInfo->isChecked()) {
+        categoriesSel << "Information";
+
+    }
+
+    if (ui->cbMusic->isChecked()) {
+        categoriesSel << "Music";
+
+    }
+
+    if (ui->cbPhotos->isChecked()) {
+        categoriesSel << "Photos";
+
+    }
+
+    if (ui->cbReference->isChecked()) {
+        categoriesSel << "Reference";
+
+    }
+
+    if (ui->cbSocial->isChecked()) {
+        categoriesSel << "Social";
+
+    }
+
+    if (ui->cbVideos->isChecked()) {
+        categoriesSel << "Videos";
+
+    }
+
+    if (ui->cbWeb->isChecked()) {
+        categoriesSel << "Web";
+
+    }
+
+    return(categoriesSel);
 }

@@ -45,6 +45,8 @@ private slots:
 
     void BlankFields();
 
+    QStringList GetCategories();
+
 private:
     Ui::MainWindow *ui;
 };
