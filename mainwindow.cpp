@@ -80,9 +80,12 @@ void MainWindow::on_btnCreateLauncher_clicked()
             out << "Terminal=" + terminalValue + "\n";
             out << "Type=" + ui->comboType->currentText() + "\n";
 
-            GetCategories();
+            QStringList categories;
+            categories = GetCategories();
 
-            out << "Categories=" + categoriesSel;
+            QString categ = categories.join(";");
+
+            out << "Categories=" + categ;
 
 
 
@@ -195,63 +198,64 @@ QStringList MainWindow::GetCategories() {
 
     QStringList categoriesSel;
 
+
     if (ui->cbAccessories->isChecked()){
-        categoriesSel << "Accessories";
+        categoriesSel.append("Accessories");
 
     }
 
     if (ui->cbCode->isChecked()) {
-        categoriesSel << "Code";
+        categoriesSel.append("Code");
 
     }
 
     if (ui->cbFiles->isChecked()) {
-        categoriesSel << "Files / Folders";
+        categoriesSel.append("Files / Folders");
 
     }
 
     if (ui->cbGraphics->isChecked()) {
-        categoriesSel << "Graphics";
+        categoriesSel.append("Graphics");
 
     }
 
     if (ui->cbHelp->isChecked()) {
-        categoriesSel << "Help";
+        categoriesSel.append("Help");
 
     }
 
     if (ui->cbInfo->isChecked()) {
-        categoriesSel << "Information";
+        categoriesSel.append("Information");
 
     }
 
     if (ui->cbMusic->isChecked()) {
-        categoriesSel << "Music";
+        categoriesSel.append("Music");   //append("Music");
 
     }
 
     if (ui->cbPhotos->isChecked()) {
-        categoriesSel << "Photos";
+        categoriesSel.append("Photos");
 
     }
 
     if (ui->cbReference->isChecked()) {
-        categoriesSel << "Reference";
+        categoriesSel.append("Reference");
 
     }
 
     if (ui->cbSocial->isChecked()) {
-        categoriesSel << "Social";
+        categoriesSel.append("Social");
 
     }
 
     if (ui->cbVideos->isChecked()) {
-        categoriesSel << "Videos";
+        categoriesSel.append("Videos");
 
     }
 
     if (ui->cbWeb->isChecked()) {
-        categoriesSel << "Web";
+        categoriesSel.append("Web");
 
     }
 
