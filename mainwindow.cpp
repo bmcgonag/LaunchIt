@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "my_vars.h"
 #include <QMessageBox>
 #include <QFileDialog>
 #include <QFile>
@@ -11,6 +12,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    countOfActions = 0;
 }
 
 MainWindow::~MainWindow()
@@ -22,6 +24,12 @@ void MainWindow::on_btnAddaction_clicked()
 {
     // add the extra Action item name and command to the list-view
     ui->listActions->addItem(ui->txtActionName->text() + " : " + ui->txtActionExec->text());
+    countOfActions++;
+    // add the individual values to a global array
+    ExtraCmdslist.append(ui->txtActionName->text());
+    ExtraActionCmdList.append(ui->txtActionExec->text());
+
+    // clear the fields.
     ui->txtActionName->setText("");
     ui->txtActionExec->setText("");
 }
@@ -85,9 +93,26 @@ void MainWindow::on_btnCreateLauncher_clicked()
 
             QString categ = categories.join(";");
 
-            out << "Categories=" + categ;
+            out << "Categories=" + categ + "\n\n";
+
+            QString actionsCollection = ExtraCmdslist.join(";");
+
+                if (countOfActions > 0) {
+                    out << "Actions=" + actionsCollection + "\n\n";
 
 
+
+                    for (int i=0; i < countOfActions; i++) {
+                        QString ExtraCmd = ExtraCmdslist[i];
+                        QString ExtraExec = ExtraActionCmdList[i];
+
+                        out << "[Desktop Action " + ExtraCmd +"]\n";
+                        out << "Name=" + ExtraCmd + "\n";
+                        out << "Exec=" + ExtraExec + "\n";
+                        out << "OnlyShowIn=Unity;\n\n";
+                    }
+
+                }
 
 
             file.close();
